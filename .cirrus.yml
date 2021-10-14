@@ -3,5 +3,7 @@ task:
   osx_instance:
     image: big-sur-base
   header_script:
-    - for F in "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/LDAP.framework/Headers/*.h" ; do echo $F ; cat $F ; done
-    - find / -name ldap.h
+    - cat /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/ldap.h
+
+#    - for F in "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/LDAP.framework/Headers/*.h" ; do echo $F ; cat $F ; done
+#    - find / -name ldap.h
