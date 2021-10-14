@@ -2,6 +2,5 @@ task:
   name: macOS
   osx_instance:
     image: big-sur-base
-  header_artifacts:
-    path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/LDAP.framework/Headers/*.h"
-    type: text/plain
+  header_script:
+    - for F in "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/LDAP.framework/Headers/*.h" ; do echo $F ; cat $F ; done
